@@ -7,6 +7,7 @@ import (
 func main() {
 	Printing()
 	arrays_and_slices()
+	loops()
 }
 
 func arrays_and_slices() {
@@ -49,4 +50,35 @@ func Printing() {
 	//Printf (formated output, no \n)
 	fmt.Printf("My name is %v i am %v  years old", name, age)
 	fmt.Printf("smth = %q \n", str2)
+}
+
+func loops() {
+	// Example of a for loop
+	fmt.Println("example of simple for loop")
+	for i := 1; i <= 5; i++ {
+		fmt.Println(i)
+	}
+
+	// Example of a while loop
+	fmt.Println("go have while loop")
+	j := 1
+	for j <= 5 {
+		fmt.Println(j)
+		j++
+	}
+
+	// Example of a nested loop
+	fmt.Println("go have nested loops")
+	for x := 1; x <= 3; x++ {
+		for y := 1; y <= 3; y++ {
+			fmt.Println(x, y)
+		}
+	}
+
+	// Example of a loop with range
+	nums := []int{1, 2, 3, 4, 5}
+	fmt.Println("loop with range through slice or array")
+	for index, value := range nums {
+		fmt.Printf("the index is %v and the value is %v \n", index, value)
+	}
 }
