@@ -13,9 +13,23 @@ func arrays_and_slices() {
 	var arr = [5]int{1, 2, 3, 4, 5}
 	var slice = []int{1, 2, 3, 4, 5}
 
+	names := []string{"gosha", "vasya", "petya"}
+
 	fmt.Println("Arrays and Slices")
 	fmt.Printf("Arrays in go are static arr = %v\n", arr)
 	fmt.Printf("Slices in go are dynamic arr = %v\n", slice)
+	fmt.Println()
+	fmt.Printf("array of names = %v\n", names)
+	names[1] = "vanya"
+	fmt.Printf("u can change arrays in go %v\n", names)
+	fmt.Println()
+	fmt.Printf("go have slices names[1:3] = %v\n", names[1:3])
+	fmt.Printf("names[1:] = %v\n", names[1:])
+	fmt.Printf("names[:3] = %v\n", names[:3])
+	fmt.Println()
+	fmt.Printf("u can add to slice. \nslise before = %v\n", slice)
+	slice = append(slice, 6)
+	fmt.Printf("slise after = %v\n", slice)
 }
 
 func Printing() {
