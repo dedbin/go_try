@@ -5,9 +5,10 @@ import (
 )
 
 func main() {
-	Printing()
-	arrays_and_slices()
-	loops()
+	// Printing()
+	// arrays_and_slices()
+	// loops()
+	buls()
 }
 
 func arrays_and_slices() {
@@ -80,5 +81,39 @@ func loops() {
 	fmt.Println("loop with range through slice or array")
 	for index, value := range nums {
 		fmt.Printf("the index is %v and the value is %v \n", index, value)
+	}
+}
+
+func buls() {
+	age := 16
+
+	fmt.Println("age = ", age)
+	fmt.Printf("age <= 18 is %v \n", age <= 18)
+	fmt.Printf("age >= 18 is %v \n", age >= 18)
+	fmt.Printf("age == 18 is %v \n", age == 18)
+	fmt.Printf("age != 18 is %v \n", age != 18)
+
+	age = 61
+	if age < 30 {
+		fmt.Println("you are young")
+	} else if age < 60 {
+		fmt.Println("you are middle")
+	} else {
+		fmt.Println("you are old")
+	}
+
+	names := []string{"gosha", "vasya", "petya", "vanya", "masha"}
+
+	for index, value := range names {
+		if index == 1 {
+			fmt.Println("continuing at index = ", index)
+			continue
+		}
+		if value == "vanya" {
+			fmt.Println("breaking at value = ", value)
+			break
+		} else {
+			fmt.Println("index = ", index, "value = ", value)
+		}
 	}
 }
